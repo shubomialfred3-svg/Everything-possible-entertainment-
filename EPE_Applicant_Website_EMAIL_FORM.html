@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100b18">
+<title>EPE | Audition Application Email Form</title>
+<style>
+:root{--bg:#100b18;--panel:#1d1428;--panel2:#271936;--purple:#a66bff;--lav:#d6baff;--text:#fff;--muted:#c9bdd5;--line:#49345d;--good:#a9edc2}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 Arial,sans-serif}a{color:var(--lav)}.wrap{width:min(1050px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#100b18f2;border-bottom:1px solid var(--line)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:1.5rem;font-weight:900;letter-spacing:3px}.logo span{color:var(--purple)}nav{display:flex;gap:20px;flex-wrap:wrap}nav a{text-decoration:none;color:var(--muted);font-size:.9rem}nav a:hover{color:white}
+.hero{padding:65px 0 55px;background:radial-gradient(ellipse at 80% 15%,#512b78,transparent 40%),linear-gradient(135deg,#120b1b,#21132f)}.eyebrow{color:var(--lav);font-size:.76rem;font-weight:bold;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(2.4rem,6vw,4.7rem);line-height:1.02;margin:14px 0}.hero p{color:var(--muted);max-width:680px}.btn{border:0;border-radius:10px;background:var(--purple);color:#160d20;font-weight:800;padding:13px 20px;cursor:pointer;text-decoration:none;display:inline-block}.btn.secondary{background:transparent;border:1px solid var(--line);color:#fff}.btn:disabled{opacity:.45;cursor:not-allowed}
+section{padding:45px 0}.section-title{margin:0 0 8px;font-size:2rem}.muted{color:var(--muted)}.notice{background:#281b37;border-left:4px solid var(--purple);padding:14px 16px;border-radius:8px;color:#e7d9f5;margin:18px 0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}.tab{padding:10px 14px;border:1px solid var(--line);background:var(--panel);color:#fff;border-radius:9px;cursor:pointer}.tab.active{background:#593584;border-color:#9e6be0}.panel{display:none}.panel.active{display:block}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;margin:16px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-weight:700;font-size:.92rem}input,select,textarea{width:100%;padding:12px 13px;border-radius:9px;border:1px solid #624b77;background:#120d19;color:#fff;font:inherit}input[type=file]{padding:10px}input[type=checkbox]{width:auto;accent-color:var(--purple);margin-right:8px}textarea{min-height:95px;resize:vertical}.hint{font-size:.82rem;color:var(--muted)}.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px}.check{padding:12px;border:1px solid var(--line);border-radius:9px;background:#171020}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.status{margin-top:15px;padding:13px;border-radius:9px;background:#18271f;color:var(--good);display:none}.status.show{display:block}.danger{color:#ffd6a8}.footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.85rem}
+@media(max-width:680px){.nav{height:auto;min-height:68px;align-items:flex-start;padding:15px 0;gap:12px;flex-direction:column}nav{gap:12px}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.checks{grid-template-columns:1fr}.hero{padding:48px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#home" style="text-decoration:none;color:white">E<span>P</span>E</a><nav><a href="#home">Home</a><a href="#information">Audition Info</a><a href="#portal">Applicant Forms</a><a href="#guardian">Guardian Consent</a><a href="#faq">FAQ</a></nav></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap"><div class="eyebrow">Everything Possible Entertainment</div><h1>YOUR JOURNEY.<br><span style="color:var(--lav)">YOUR MOMENT.</span></h1><p>Welcome to the EPE applicant portal. Read the audition information, complete the applicant form and review the guardian consent requirements.</p><a class="btn" href="#portal">Go to applicant forms ↓</a></div></section>
+<section id="information"><div class="wrap"><div class="eyebrow">Before you apply</div><h2 class="section-title">Audition information</h2><p class="muted">Planned applicant age range: 9–15. Parent or legal guardian involvement is required.</p><div class="grid">
+<div class="card"><h3>Vocal</h3><p class="muted">Prepare a clear singing performance video.</p></div><div class="card"><h3>Dance</h3><p class="muted">Prepare a dance performance video.</p></div><div class="card"><h3>Rap (optional)</h3><p class="muted">You may include a rap video if you wish.</p></div><div class="card"><h3>Introduction</h3><p class="muted">Prepare a short introduction about yourself and your interests.</p></div></div>
+<div class="notice"><strong>Email hand-off:</strong> The final button prepares an email to <b>everythingpossible.entertainment@gmail.com</b> with the form answers. A parent/guardian must review and press Send. This prototype cannot securely upload video files; do not email audition videos until EPE has an adult-supervised, secure upload method.</div></div></section>
+<section id="portal"><div class="wrap"><div class="eyebrow">Applicant portal</div><h2 class="section-title">Applicant forms</h2><p class="muted">The sections below show the information the official application will request.</p>
+<div class="tabs"><button class="tab active" data-tab="applicant">1. Applicant details</button><button class="tab" data-tab="audition">2. Audition uploads</button><button class="tab" data-tab="guardian">3. Guardian consent</button></div>
+<form id="applicationForm">
+<div class="panel active" id="applicant">
+<div class="card"><h3>Applicant information</h3><div class="grid">
+<div class="field"><label for="fullName">Applicant full name *</label><input id="fullName" name="fullName" required placeholder="Enter applicant name"></div>
+<div class="field"><label for="age">Age *</label><input id="age" name="age" type="number" min="9" max="15" required placeholder="9–15"></div>
+<div class="field"><label for="email">Applicant email *</label><input id="email" name="email" type="email" required placeholder="name@example.com"></div>
+<div class="field"><label for="country">Country *</label><input id="country" name="country" required placeholder="Country"></div>
+<div class="field"><label for="region">State / Province *</label><input id="region" name="region" required placeholder="State or province"></div>
+<div class="field"><label for="city">City (optional)</label><input id="city" name="city" placeholder="City"></div>
+</div><div class="actions"><button type="button" class="btn next" data-next="audition">Continue to audition uploads →</button></div></div></div>
+<div class="panel" id="audition"><div class="card"><h3>Choose your audition categories</h3><p class="hint">Vocal and dance are planned core categories. Rap and additional talent are optional.</p>
+<div class="checks"><label class="check"><input type="checkbox" name="category" value="Vocal"> Vocal</label><label class="check"><input type="checkbox" name="category" value="Dance"> Dance</label><label class="check"><input type="checkbox" name="category" value="Rap"> Rap (optional)</label><label class="check"><input type="checkbox" name="category" value="Other talent"> Other talent (optional)</label></div>
+<h3 style="margin-top:26px">Performance files</h3><div class="grid">
+<div class="field"><label for="vocalFile">Vocal video</label><input id="vocalFile" name="vocalFile" type="file" accept="video/*"><span class="hint">Choose a video file for the vocal performance.</span></div>
+<div class="field"><label for="danceFile">Dance video</label><input id="danceFile" name="danceFile" type="file" accept="video/*"><span class="hint">Choose a video file for the dance performance.</span></div>
+<div class="field"><label for="rapFile">Rap video (optional)</label><input id="rapFile" name="rapFile" type="file" accept="video/*"></div>
+<div class="field"><label for="extraFile">Additional talent (optional)</label><input id="extraFile" name="extraFile" type="file" accept="video/*,audio/*"></div>
+<div class="field full"><label for="intro">Short self-introduction *</label><textarea id="intro" required placeholder="Introduce yourself briefly..."></textarea></div>
+</div><div class="notice danger">Video files selected on this page are NOT attached to the email and are NOT uploaded. Please do not send real audition videos by ordinary email. EPE needs a secure, adult-supervised upload system before collecting them.</div>
+<div class="actions"><button type="button" class="btn secondary prev" data-prev="applicant">← Back</button><button type="button" class="btn next" data-next="guardian">Continue to guardian consent →</button></div></div></div>
+<div class="panel" id="guardian"><div class="card"><h3>Parent / legal guardian information</h3><div class="grid">
+<div class="field"><label for="guardianName">Guardian full name *</label><input id="guardianName" required placeholder="Parent or guardian name"></div>
+<div class="field"><label for="relationship">Relationship to applicant *</label><select id="relationship" required><option value="">Choose one</option><option>Parent</option><option>Legal guardian</option><option>Other authorised guardian</option></select></div>
+<div class="field full"><label for="guardianEmail">Guardian email *</label><input id="guardianEmail" type="email" required placeholder="guardian@example.com"></div>
+</div><h3>Consent confirmations</h3>
+<p><label class="check"><input type="checkbox" required> I confirm that I am the applicant's parent or legal guardian, or have legal authority to provide consent.</label></p>
+<p><label class="check"><input type="checkbox" required> I have reviewed the audition process and understand the planned age range and requirements.</label></p>
+<p><label class="check"><input type="checkbox" required> I have read the privacy and safeguarding information and understand that audition materials should remain private.</label></p>
+<p><label class="check"><input type="checkbox" required> I understand that applying or passing a stage does not guarantee debut, a contract, travel or representation by another company.</label></p>
+<p><label class="check"><input type="checkbox"> I separately agree to optional publicity use of the applicant's image/video (leave unticked if not agreed).</label></p>
+<div class="notice">Publicity permission is optional and separate from audition participation. The live system must record consent version, guardian verification and timestamps securely.</div>
+<div class="actions"><button type="button" class="btn secondary prev" data-prev="audition">← Back</button><button type="submit" class="btn">Prepare audition email →</button></div><div class="status" id="status" role="status"></div></div></div>
+</form>
+</div></section>
+<section id="faq"><div class="wrap"><div class="eyebrow">Help</div><h2 class="section-title">Applicant FAQ</h2>
+<div class="card"><h3>Are applications open?</h3><p class="muted">No. This is a website prototype. Real applications must wait until secure backend services and adult supervision are in place.</p><h3>Who can apply?</h3><p class="muted">The planned age range is 9–15. Country eligibility will be confirmed before launch.</p><h3>Can I apply again?</h3><p class="muted">The planned applicant system will support re-auditions through the same account, retaining previous attempts privately.</p><h3>Will my video be public?</h3><p class="muted">No. Audition videos are intended to remain private. Any separate public use requires specific guardian consent and the young person's agreement.</p></div></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="logo">E<span style="color:var(--purple)">P</span>E</div><p>Everything Possible Entertainment · Discover · Develop · Perform</p><p>EPE is an independent, K-pop-inspired creative project and is not affiliated with any existing entertainment company.</p><p>Email hand-off prototype: the page opens a pre-filled email for a parent/guardian to review and send. Video files are not uploaded or attached. Do not accept real applications until an adult-supervised secure upload and privacy process is ready.</p></div></footer>
+<script>
+const tabs=[...document.querySelectorAll('.tab')],panels=[...document.querySelectorAll('.panel')];
+function show(id){tabs.forEach(t=>t.classList.toggle('active',t.dataset.tab===id));panels.forEach(p=>p.classList.toggle('active',p.id===id));document.getElementById('portal').scrollIntoView({behavior:'smooth'});}
+tabs.forEach(t=>t.addEventListener('click',()=>show(t.dataset.tab)));
+document.querySelectorAll('.next').forEach(b=>b.addEventListener('click',()=>{const panel=b.closest('.panel');const required=[...panel.querySelectorAll('[required]')];for(const el of required){if(!el.checkValidity()){el.reportValidity();return;}}show(b.dataset.next)}));
+document.querySelectorAll('.prev').forEach(b=>b.addEventListener('click',()=>show(b.dataset.prev)));
+document.getElementById('applicationForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const form=document.getElementById('applicationForm');
+  for(const el of form.querySelectorAll('[required]')){
+    if(!el.checkValidity()){el.reportValidity();return;}
+  }
+  const selected=[...form.querySelectorAll('input[name="category"]:checked')].map(x=>x.value);
+  if(!selected.length){alert('Please choose at least one audition category.');show('audition');return;}
+  const get=id=>document.getElementById(id).value.trim();
+  const consent=[...document.querySelectorAll('#guardian input[type="checkbox"]')];
+  const publicity=consent[consent.length-1].checked?'Yes':'No';
+  const stamp=new Date().toLocaleString();
+  const body=[
+    'EPE AUDITION APPLICATION',
+    '',
+    'Applicant name: '+get('fullName'),
+    'Age: '+get('age'),
+    'Applicant email: '+get('email'),
+    'Country: '+get('country'),
+    'State / Province: '+get('region'),
+    'City: '+(get('city')||'Not provided'),
+    '',
+    'Guardian name: '+get('guardianName'),
+    'Relationship: '+get('relationship'),
+    'Guardian email: '+get('guardianEmail'),
+    '',
+    'Audition categories: '+selected.join(', '),
+    'Self-introduction: '+get('intro'),
+    '',
+    'Optional publicity consent: '+publicity,
+    'Prepared on: '+stamp,
+    '',
+    'IMPORTANT: This email does not contain audition video files. EPE must provide a secure upload method before videos are collected.',
+    'Guardian: please review all details and decide whether to send this email.'
+  ].join('\n');
+  const subject='EPE Audition Application - '+get('fullName');
+  const mailto='mailto:everythingpossible.entertainment@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  const status=document.getElementById('status');
+  status.textContent='Your email app should open with the application details. A parent/guardian must review the message and press Send. No application is received by EPE until that email is actually sent. Video files are not attached.';
+  status.classList.add('show');
+  window.location.href=mailto;
+})
+</script>
+</body></html>
